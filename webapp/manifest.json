@@ -16,7 +16,10 @@
       "toolsId": "c4c00891-56ee-4c6a-b392-96477c65d766"
     },
     "dataSources": {
-      "mainService": {
+
+      
+
+      "invoiceRemote": {
         "uri": "/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
@@ -73,7 +76,12 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
+      },
+      
+      "invoice": {
+        "dataSource": "invoiceRemote"
       }
+
     },
     "resources": {
       "css": [

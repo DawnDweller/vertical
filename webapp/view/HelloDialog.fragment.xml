@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Dialog
+        id="helloDialog"
+        title="=> {/recipient/name}"
+    >   
+    <content>
+         <core:Icon
+            src="sap-icon://bell"
+            size="3rem"
+            class="sapUiMediumMargin"/>
+    </content> 
+        <beginButton>
+            <Button
+                text="{i18n_jp>dialogCloseButtonText}"
+                press=".onCloseDialog"
+            />
+        </beginButton>
+   </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,32 @@
+<mvc:View controllerName="vertical.project123.controller.HelloPanel"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+                        <Panel headerText="{i18n_jp>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
+                            <content>
+                                <Button
+                                    id="helloDialogButton"
+                                    text="{i18n_jp>openDialogButtonText}"
+                                    press=".onOpenDialog"
+                                    class="sapUiSmallMarginEnd"
+                                    icon="sap-icon://bell-2"
+                                />
+                                <Button 
+                                    text="{i18n_jp>showHelloButtonText}"
+                                    press=".onClick"
+                                    class="myCustomButton"
+                                />
+                                <Input
+                                    value="{/recipient/name}"
+                                    description="--> {/recipient/name}"
+                                    valueLiveUpdate="true"
+                                    width="60%"
+                                />
+                                <FormattedText
+									htmlText="おはよう {/recipient/name}"
+									class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"
+                                />
+                            </content>
+                        </Panel>
+                    
+</mvc:View>

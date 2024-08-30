@@ -1,16 +1,16 @@
 <mvc:View controllerName="vertical.project123.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n_jp>title}">
-        <Button 
-            text="{i18n_jp>showHelloButtonText}"
-            press=".onClick"
-        />
-        <Input
-            value="{/recipient/name}"
-            description="Hello {/recipient/name}"
-            valueLiveUpdate="true"
-            width="60%"
-        />
-    </Page>
+    <Shell>
+        <App class="myAppDemoWT">
+            <pages>
+                <Page id="page" title="{i18n_jp>title}">
+                    <content>
+                       <mvc:XMLView viewName="vertical.project123.view.HelloPanel"/>
+                       <mvc:XMLView viewName="vertical.project123.view.InvoiceList"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
