@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SAPUI5 MockServer Test Page</title>
+    <script
+        id="sap-ui-bootstrap"
+        src="../resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-resource-roots='{
+            "vertical.project123": "../"
+        }'
+        data-sap-ui-on-init="module:vertical/project123/test/initMockServer"
+        data-sap-ui-compat-version="edge"
+        data-sap-ui-async="true"
+    ></script>
+</head>
+<body class="sapUiBody" id="content">
+    <div
+        data-sap-ui-component data-name="vertical.project123"
+        data-id="container"
+        data-settings='{"id" : "project123"}'
+    ></div>
+</body>
+</html>
