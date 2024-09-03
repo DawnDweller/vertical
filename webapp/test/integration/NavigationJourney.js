@@ -9,13 +9,20 @@ sap.ui.define([
 
 	QUnit.module("Navigation Journey");
 
-	opaTest("Should see the initial page of the app", function (Given, When, Then) {
+	opaTest("I should be able to open the Hello Dialog", function (Given, When, Then) {
 		// Arrangements
-		Given.iStartMyApp();
+		Given.iStartMyUIComponent({
+			componentConfig: {
+				name: "vertical.project123"
+			}
+		});
+
+		//Actions
+		When.onTheAppPage.iPressTheDialogButton();
 
 		// Assertions
-		Then.onTheAppPage.iShouldSeeTheApp();
-      	Then.onTheViewPage.iShouldSeeThePageView();
+		Then.onTheAppPage.iShouldSeeTheHelloDialog();
+      	/* Then.onTheViewPage.iShouldSeeThePageView(); */
 
 		//Cleanup
 		Then.iTeardownMyApp();

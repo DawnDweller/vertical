@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#verticalproject123-display\"",
+    "start-QUnitTest": "fiori run --open test/integration/opaTests.qunit.html",
     "start-mockServer": "ui5 serve -o test/mockServer.html",
     "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#verticalproject123-display\"",
     "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
