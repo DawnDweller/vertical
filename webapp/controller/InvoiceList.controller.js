@@ -31,5 +31,12 @@ sap.ui.define([
 			oBinding.filter(aFilter);
 		},
 
+		onPress() {
+			const oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("DetailRoute");
+			alert("1");
+			console.log(oRouter);
+		},
+
 	});
 });

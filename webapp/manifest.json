@@ -91,6 +91,7 @@
       ]
     },
     "routing": {
+      "__n_o_t_e___": "İki routing de çalışıyor. Bu güncel olan aşağıdaki eski versiyon tutorialdaki ama o da çalışıyor",
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
@@ -102,20 +103,34 @@
       },
       "routes": [
         {
-          "name": "RouteView1",
-          "pattern": ":?query:",
+          "name": "OverviewRoute",
+          "pattern": "",
           "target": [
-            "TargetView1"
+            "OverviewView"
+          ]
+        },
+        {
+          "name": "DetailRoute",
+          "pattern": "detail",
+          "target": [
+            "DetailView"
           ]
         }
       ],
       "targets": {
-        "TargetView1": {
+        "OverviewView": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "View1",
-          "viewName": "View1"
+          "viewId": "Overview",
+          "viewName": "Overview"
+        },
+        "DetailView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Detail",
+          "viewName": "Detail"
         }
       }
     },
@@ -123,7 +138,40 @@
       "viewName": "vertical.project123.view.App",
       "type": "XML",
       "async": true,
+      "note_1": "yukarıdaki routing'in controlId propertisi App'i Id olarak görmüyor. Burdaki id önemli. App.view.xml'e verdiğimiz id bir satır aşağıdaki id. rootView'daki yani",
       "id": "App"
+    },
+    "routing_": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "vertical.project123.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "OverviewRoute",
+          "target": "OverviewView"
+        },
+        {
+          "pattern": "detail",
+          "name": "DetailRoute",
+          "target": "DetailView"
+        }
+      ],
+      "targets": {
+        "OverviewView": {
+          "id": "overview",
+          "name": "Overview"
+        },
+        "DetailView": {
+          "id": "detail",
+          "name": "Detail"
+        }
+      }
     }
   }
 }

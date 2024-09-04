@@ -28,6 +28,8 @@
       </headerToolbar>
       <items>
          <ObjectListItem
+            type="Navigation"
+            press=".onPress"
             title="{invoice>Quantity} x {invoice>ProductName}"
             number="{
                     parts: [

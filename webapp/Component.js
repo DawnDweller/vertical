@@ -48,6 +48,7 @@ sap.ui.define([
                     bundleName: "vertical.project123.i18n.i18n_jp"
                 });
                 this/* .getView() */.setModel(i18nModel, "i18n_jp");
+
             }
         });
     }
