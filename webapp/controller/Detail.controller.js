@@ -20,11 +20,11 @@ sap.ui.define([
 			const oHistory = History.getInstance();
 			const sPreviousHash = oHistory.getPreviousHash();
 
-			if (sPreviousHash !== undefined) {
+			if (sPreviousHash !== undefined) {//we will get a valid result only if a navigation step inside our app has already happened. Then we will simply use the browser history to go back to the previous page.
 				window.history.go(-1);
-			} else {
+			} else {//If no navigation has happened before, we can tell the router to go to our overview page directly.
 				const oRouter = this.getOwnerComponent().getRouter();
-				oRouter.navTo("overview", {}, true);
+				oRouter.navTo("OverviewRoute", {}, true);
 			}
 		},
 	});
