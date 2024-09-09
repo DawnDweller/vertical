@@ -111,7 +111,7 @@
         },
         {
           "name": "DetailRoute",
-          "pattern": "detail",
+          "pattern": "detail/{invoicePath}",
           "target": [
             "DetailView"
           ]
@@ -138,10 +138,10 @@
       "viewName": "vertical.project123.view.App",
       "type": "XML",
       "async": true,
-      "note_1": "yukarıdaki routing'in controlId propertisi App'i Id olarak görmüyor. Burdaki id önemli. App.view.xml'e verdiğimiz id bir satır aşağıdaki id. rootView'daki yani",
+      "note_1": "yukarıdaki routing'in controlId propertisi App'i Id olarak görmüyor. Burdaki id önemli. App.view.xml'e verdiğimiz id bir satır aşağıdaki id. rootView'daki yani... Bi daha düşündüm de yanlış anlamışım. Çünkü App.view.xml'deki büyük harfle başlıyor.",
       "id": "App"
     },
-    "routing_": {
+    "routing_old": {
       "config": {
         "routerClass": "sap.m.routing.Router",
         "type": "View",
@@ -157,7 +157,7 @@
           "target": "OverviewView"
         },
         {
-          "pattern": "detail",
+          "pattern": "detail/{invoicePath}",
           "name": "DetailRoute",
           "target": "DetailView"
         }
