@@ -1,7 +1,9 @@
 <mvc:View
 	controllerName="vertical.project123.controller.Detail"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:wt="vertical.project123.control"
+	>
 	<Page
 		title="{i18n_jp>detailPageTitle}"
 		showNavButton="true"
@@ -9,6 +11,11 @@
 		>
 		<ObjectHeader 
 		intro="{invoice>ShipperName}" title="{invoice>ProductName}"
+		/>
+		<wt:ProductRating 
+			id="rating" 
+			class="sapUiSmallMarginBeginEnd" 
+			change=".onRatingChange"
 		/>
 	</Page>
 </mvc:View>
