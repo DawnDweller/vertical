@@ -2,13 +2,19 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
 
-                        <Panel headerText="{i18n_jp>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
+                        <Panel 
+                            headerText="{i18n_jp>helloPanelTitle}" 
+                            class="sapUiResponsiveMargin" 
+                            width="auto"
+                            expandable="{device>/system/phone}"
+                            expanded="{= !${device>/system/phone} }"
+                        >
                             <content>
                                 <Button
                                     id="helloDialogButton"
                                     text="{i18n_jp>openDialogButtonText}"
                                     press=".onOpenDialog"
-                                    class="sapUiSmallMarginEnd"
+                                    class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"
                                     icon="sap-icon://bell-2"
                                 />
                                 <Button 

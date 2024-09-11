@@ -31,7 +31,12 @@ sap.ui.define([
                 this.getRouter().initialize();
 
                 // set the device model
-                this.setModel(models.createDeviceModel(), "device");
+                const oDeviceModel = new JSONModel(Device);
+                oDeviceModel.setDefaultBindingMode("OneWay");
+                this.setModel(oDeviceModel, "device");
+                //binding mode must be OneWay as the device model is read-only and we want to avoid changing the model accidentally
+                // when we bind properties of a control to it. By default, models in SAPUI5 are bidirectional (TwoWay). When the property changes, the bound model value is updated as well.
+                /* this.setModel(models.createDeviceModel(), "device"); */ //Bu fiorinin boiler plate ile getirdiği yeni versiyon, yukardaki tutorialdaki. İkisi de çalışıyor.
 
                  // set data model on view
                 const oData = {

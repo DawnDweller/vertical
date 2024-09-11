@@ -1,12 +1,18 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
     "sap/ui/core/routing/History",
-	"sap/m/MessageToast"
-], (Controller, History, MessageToast) => {
+	"sap/m/MessageToast",
+	"sap/ui/model/json/JSONModel"
+], (Controller, History, MessageToast, JSONModel) => {
 	"use strict";
 
 	return Controller.extend("vertical.project123.controller.Detail", {
 		onInit() {
+			const oViewModel = new JSONModel({
+				currency: "EUR"
+			});
+			this.getView().setModel(oViewModel, "view");
+
 			const oRouter = this.getOwnerComponent().getRouter();
 			oRouter.getRoute("DetailRoute").attachPatternMatched(this.onObjectMatched, this);
 		},
