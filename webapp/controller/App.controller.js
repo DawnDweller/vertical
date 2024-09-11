@@ -7,7 +7,9 @@ sap.ui.define(
   
       return BaseController.extend("vertical.project123.controller.App", {
         onInit: function() {
+            this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
         }
+        
       });
     }
   );

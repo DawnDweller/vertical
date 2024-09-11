@@ -54,7 +54,10 @@ sap.ui.define([
                 });
                 this/* .getView() */.setModel(i18nModel, "i18n_jp");
 
-            }
+            },
+            getContentDensityClass() {
+                return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
+            },
         });
     }
 );
